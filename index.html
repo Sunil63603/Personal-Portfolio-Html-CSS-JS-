@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--Meta tags for SEO-->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Sunil Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!--end of meta tags for SEO-->
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <!--end of fonts-->
+
+  <!-- Vendor CSS Files(UX,responsive design) -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <!-- aos means Animate on scroll library -->
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!--end of Vendor CSS files-->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- 👆tabnine gave this for 'js' and 'react' icons in about section -->
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- link CSS file in head,so that page renders(with styles) as fast as possible -->
+</head>
+
+<!-- ❌I Didnt find .index-page in main.css-->
+<body class="index-page">
+  <!-- This below code is related to left side bar(navigation bar of our page) -->
+  <header id="header" class="header dark-background d-flex flex-column">
+    <!-- below tag is used to hide left side bar,and show a button(which toggles visibility),in mobile view-->
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <!-- 'i' tag is used to display icons-->
+
+    <!-- This is code related to image displayed in left side bar -->
+    <div class="profile-img">
+      <img src="assets\img\Sunil_golden_logo.png" alt="my_image" class="img-fluid rounded-circle">
+    </div>
+
+    <!-- 👇here replace href to my portfolio link(deployed link) -->
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <h1>Sunil S</h1>
+    </a>
+
+    <!-- code to display social media links in left side bar -->
+     <!-- i think 'text-center' is class of bootstrap framework-->
+    <div class="social-links text-center">
+      <a href="https://www.linkedin.com/in/Sunil63603/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/Sunil63603" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
+      <a href="mailto:s60667843@gmail.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-envelope"></i></a>
+      <a href="https://wa.me/8197759383" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a>
+    </div>
+
+    <!-- code used for navigation between different sections of the portfolio -->
+    <nav class="navmenu">
+      <ul>
+        <!-- theres no specific code related to 'li' in navmenu -->
+         <!-- active class makes About section as default page-->
+        <li><a href="#about" class="active"><i class="bi bi-person navicon"></i>About</a></li>
+        <li><a href="#skills"><i class="bi bi-tools navicon"></i>Skills</a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="#projects"><i class="bi bi-images navicon"></i> Projects</a></li>
+        <li class="contact-button"><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+        <!-- 'contact-button' class is used to highlight contact button. -->
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <!-- About Section -->
+     <!-- id='about' is used for navigation to about section when user clicks on about in left side bar -->
+    <section id="about" class="about section">
+      <!-- 👇in future,if you want ,then add image here(background image for about section) -->
+      <!-- <img src="" alt="" data-aos="fade-in" class=""> -->
+       <!-- i think 'container' is bootstrap class -->
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <!-- 'section' and 'section-title' are both written together in CSS file -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>About me</h2>
+        </div>
+        <!--❌in css file there is both 'about-content' and '.about','.content'  -->
+        <div class="about-content">
+          <div class="about-text">
+            <h2 style="color:black;font-size:3rem;font-weight: bold;">Sunil</h2>
+            <!--in future if you want to add more roles,just add those new roles into this 'data-typed-items' -->
+            <p><span class="typed" data-typed-items="Front End Web Developer" style="color:black"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+            <p class="fst-italic py-3">
+              <!-- Both JS and React icons are used here -->
+              Built projects using <i class="fab fa-js"></i> and <i class="fab fa-react"></i>
+            </p>
+          </div>
+          <div class="about-button">
+            <!-- this button slowly navigates to the "projects" section -->
+            <a href="#projects" class="btn btn-green">
+              See my work<i class="bi bi-arrow-down-short"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section><!-- /About Section -->
+  
+    <!-- 👇chatGPT generated skills section -->
+    <!-- Skills Section -->
+    <section id="skills" class="skills section light-background">
+      <!-- 'id=skills' is used while navigating to this section -->
+       <!-- i thinks 'light-background' is from bootstrap framework -->
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Tech Skills</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div>
+          <div class="col-lg-12">
+            <div class="skills-box">
+              <div class="skill-item"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                <path fill="#283593" fill-rule="evenodd" d="M22.903,3.286c0.679-0.381,1.515-0.381,2.193,0 c3.355,1.883,13.451,7.551,16.807,9.434C42.582,13.1,43,13.804,43,14.566c0,3.766,0,15.101,0,18.867 c0,0.762-0.418,1.466-1.097,1.847c-3.355,1.883-13.451,7.551-16.807,9.434c-0.679,0.381-1.515,0.381-2.193,0 c-3.355-1.883-13.451-7.551-16.807-9.434C5.418,34.899,5,34.196,5,33.434c0-3.766,0-15.101,0-18.867 c0-0.762,0.418-1.466,1.097-1.847C9.451,10.837,19.549,5.169,22.903,3.286z" clip-rule="evenodd"></path><path fill="#5c6bc0" fill-rule="evenodd" d="M5.304,34.404C5.038,34.048,5,33.71,5,33.255 c0-3.744,0-15.014,0-18.759c0-0.758,0.417-1.458,1.094-1.836c3.343-1.872,13.405-7.507,16.748-9.38 c0.677-0.379,1.594-0.371,2.271,0.008c3.343,1.872,13.371,7.459,16.714,9.331c0.27,0.152,0.476,0.335,0.66,0.576L5.304,34.404z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M24,10c7.727,0,14,6.273,14,14s-6.273,14-14,14 s-14-6.273-14-14S16.273,10,24,10z M24,17c3.863,0,7,3.136,7,7c0,3.863-3.137,7-7,7s-7-3.137-7-7C17,20.136,20.136,17,24,17z" clip-rule="evenodd"></path><path fill="#3949ab" fill-rule="evenodd" d="M42.485,13.205c0.516,0.483,0.506,1.211,0.506,1.784 c0,3.795-0.032,14.589,0.009,18.384c0.004,0.396-0.127,0.813-0.323,1.127L23.593,24L42.485,13.205z" clip-rule="evenodd"></path>
+                </svg></div>
+              <div class="skill-item"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                <path fill="#F44336" d="M23.65,24.898c-0.998-1.609-1.722-2.943-2.725-5.455C19.229,15.2,31.24,11.366,26.37,3.999c2.111,5.089-7.577,8.235-8.477,12.473C17.07,20.37,23.645,24.898,23.65,24.898z"></path><path fill="#F44336" d="M23.878,17.27c-0.192,2.516,2.229,3.857,2.299,5.695c0.056,1.496-1.447,2.743-1.447,2.743s2.728-0.536,3.579-2.818c0.945-2.534-1.834-4.269-1.548-6.298c0.267-1.938,6.031-5.543,6.031-5.543S24.311,11.611,23.878,17.27z"></path><g><path fill="#1565C0" d="M32.084 25.055c1.754-.394 3.233.723 3.233 2.01 0 2.901-4.021 5.643-4.021 5.643s6.225-.742 6.225-5.505C37.521 24.053 34.464 23.266 32.084 25.055zM29.129 27.395c0 0 1.941-1.383 2.458-1.902-4.763 1.011-15.638 1.147-15.638.269 0-.809 3.507-1.638 3.507-1.638s-7.773-.112-7.773 2.181C11.683 28.695 21.858 28.866 29.129 27.395z"></path><path fill="#1565C0" d="M27.935,29.571c-4.509,1.499-12.814,1.02-10.354-0.993c-1.198,0-2.974,0.963-2.974,1.889c0,1.857,8.982,3.291,15.63,0.572L27.935,29.571z"></path><path fill="#1565C0" d="M18.686,32.739c-1.636,0-2.695,1.054-2.695,1.822c0,2.391,9.76,2.632,13.627,0.205l-2.458-1.632C24.271,34.404,17.014,34.579,18.686,32.739z"></path><path fill="#1565C0" d="M36.281,36.632c0-0.936-1.055-1.377-1.433-1.588c2.228,5.373-22.317,4.956-22.317,1.784c0-0.721,1.807-1.427,3.477-1.093l-1.42-0.839C11.26,34.374,9,35.837,9,37.017C9,42.52,36.281,42.255,36.281,36.632z"></path><path fill="#1565C0" d="M39,38.604c-4.146,4.095-14.659,5.587-25.231,3.057C24.341,46.164,38.95,43.628,39,38.604z"></path></g>
+                </svg></div>
+              <div class="skill-item"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                <path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path><path fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path><path fill="#FFF" d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z"></path><path fill="#EEE" d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z"></path>
+                </svg></div>
+              <div class="skill-item"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                <path fill="#0277BD" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path><path fill="#039BE5" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path><path fill="#FFF" d="M33.1 13L24 13 24 17 28.9 17 28.6 21 24 21 24 25 28.4 25 28.1 29.5 24 30.9 24 35.1 31.9 32.5 32.6 21 32.6 21z"></path><path fill="#EEE" d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4L19.8,27z"></path>
+                </svg></div>
+              <div class="skill-item"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                <path fill="#ffd600" d="M6,42V6h36v36H6z"></path><path fill="#000001" d="M29.538 32.947c.692 1.124 1.444 2.201 3.037 2.201 1.338 0 2.04-.665 2.04-1.585 0-1.101-.726-1.492-2.198-2.133l-.807-.344c-2.329-.988-3.878-2.226-3.878-4.841 0-2.41 1.845-4.244 4.728-4.244 2.053 0 3.528.711 4.592 2.573l-2.514 1.607c-.553-.988-1.151-1.377-2.078-1.377-.946 0-1.545.597-1.545 1.377 0 .964.6 1.354 1.985 1.951l.807.344C36.452 29.645 38 30.839 38 33.523 38 36.415 35.716 38 32.65 38c-2.999 0-4.702-1.505-5.65-3.368L29.538 32.947zM17.952 33.029c.506.906 1.275 1.603 2.381 1.603 1.058 0 1.667-.418 1.667-2.043V22h3.333v11.101c0 3.367-1.953 4.899-4.805 4.899-2.577 0-4.437-1.746-5.195-3.368L17.952 33.029z"></path>
+                </svg></div>
+              <div class="skill-item"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                <path fill="#80deea" d="M24,34C11.1,34,1,29.6,1,24c0-5.6,10.1-10,23-10c12.9,0,23,4.4,23,10C47,29.6,36.9,34,24,34z M24,16	c-12.6,0-21,4.1-21,8c0,3.9,8.4,8,21,8s21-4.1,21-8C45,20.1,36.6,16,24,16z"></path><path fill="#80deea" d="M15.1,44.6c-1,0-1.8-0.2-2.6-0.7C7.6,41.1,8.9,30.2,15.3,19l0,0c3-5.2,6.7-9.6,10.3-12.4c3.9-3,7.4-3.9,9.8-2.5	c2.5,1.4,3.4,4.9,2.8,9.8c-0.6,4.6-2.6,10-5.6,15.2c-3,5.2-6.7,9.6-10.3,12.4C19.7,43.5,17.2,44.6,15.1,44.6z M32.9,5.4	c-1.6,0-3.7,0.9-6,2.7c-3.4,2.7-6.9,6.9-9.8,11.9l0,0c-6.3,10.9-6.9,20.3-3.6,22.2c1.7,1,4.5,0.1,7.6-2.3c3.4-2.7,6.9-6.9,9.8-11.9	c2.9-5,4.8-10.1,5.4-14.4c0.5-4-0.1-6.8-1.8-7.8C34,5.6,33.5,5.4,32.9,5.4z"></path><path fill="#80deea" d="M33,44.6c-5,0-12.2-6.1-17.6-15.6C8.9,17.8,7.6,6.9,12.5,4.1l0,0C17.4,1.3,26.2,7.8,32.7,19	c3,5.2,5,10.6,5.6,15.2c0.7,4.9-0.3,8.3-2.8,9.8C34.7,44.4,33.9,44.6,33,44.6z M13.5,5.8c-3.3,1.9-2.7,11.3,3.6,22.2	c6.3,10.9,14.1,16.1,17.4,14.2c1.7-1,2.3-3.8,1.8-7.8c-0.6-4.3-2.5-9.4-5.4-14.4C24.6,9.1,16.8,3.9,13.5,5.8L13.5,5.8z"></path><circle cx="24" cy="24" r="4" fill="#80deea"></circle>
+                </svg></div>
+            </div>
+          </div>
+        </div>
+        <!-- i think 'row' is from bootstrap framework -->
+        <div class="row" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-12 text-center" style="margin-top:20px">
+            <a href="#resume">
+              <button class="btn-green">Check out my Resume<i class="bi bi-arrow-down-short"></i></button>
+            </a>  
+          </div>
+        </div>
+      </div>
+    </section><!-- /Skills Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+        <p>Seeking Front End Web development Opportunities(Internship)</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Summary</h3>
+
+            <div class="resume-item pb-0">
+              <h4>Sunil S</h4>
+              <ul>
+                <li>Chintamani,Karnataka,India</li>
+                <li><a href="mailto:s60667843@gmail.com"  target="_blank" rel="noopener noreferrer">s60667843@gmail.com</a></li>
+                <li><a href="tel:+91 8197759383" target="_blank" rel="noopener noreferrer">+91 8197759383</a><li>
+                  <!-- //!fix this there are 4 list items in web page but only 3 in code -->
+              </ul>
+            </div><!-- End Resume Item -->
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Bachelor Of Engineering</h4>
+              <p>Pursuing Computer Science degree</p>
+              <p><em>SJC Institute of Technology, Chikkaballapur, Karnataka</em></p>
+              <h5>2021 - 2025</h5>
+            </div><!-- Edn Resume Item -->
+            
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>DigiGlobe Solutions Intern</h4>
+              <h5>Aug 2024 - Sept 2024</h5>
+              <p><em>Bengaluru,Karnataka,India </em></p>
+              <ul>
+                <li>Built Personal Portfolio website</li>
+              </ul>
+            </div>
+
+            <h3 class="resume-title">Skills</h3>
+            <div class="resume-item">
+              <ul>
+                <li><strong>Programming Languages</strong> : C,Core Java</li>
+                <li><strong>Web Technologies</strong> : HTML,CSS,JavaScript,React</li>
+                <li><strong>Tools</strong> : VSCode,Eclipse,Git,MS Office</li>
+              <ul> 
+            </div>
+          </div>
+        </div>
+        <div class="resume-button-container">
+          <!-- here is the logic to download resume ,from my google drive -->
+          <a href="https://drive.google.com/uc?export=download&id=1VeSq-tixaKgA4ykXBLT5zGtZsjm5kO4R" class="btn-green" download="Sunil_Resume.pdf">Download Resume <i class="bi bi-download"></i></a>
+        </div>
+      </div>
+    </section><!-- /Resume Section -->
+
+    <!-- ❌change fonts for text in projects section -->
+    <!-- 👇Usman code for projects section -->
+     <!-- Project Section  -->
+     <section id="projects" class="contact section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Project</h2>
+      </div>
+      <div class="projects-grid">
+        
+        <!-- Project 1 -->
+        <div class="project-card">
+          <h6>Recipe Search Application</h6>
+          <p>Built using Html,CSS,JS and recipe fetching API</p>
+          <a href="https://github.com/Sunil63603/ESCR-forkify.git" class="btn github-btn" target="_blank">GitHub Link</a>
+          <a href="https://escr.netlify.app/" class="btn demo-btn" target="_blank">Live Demo</a>
+          <video width="100%" controls autoplay>
+            <source src="assets\img\ForKify App - Google Chrome 2024-09-02 21-09-11.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <h6>Tour Tracking Application</h6>
+          <p>Built using Html,CSS,JS,REact and Map API(leaflet)</p>
+          <a href="https://github.com/Sunil63603/WorldWise.git" class="btn github-btn" target="_blank">GitHub Link</a>
+          <a href="https://sunil-worldwise.netlify.app/" class="btn demo-btn" target="_blank">Live Demo</a>
+          <video width="100%" controls>
+            <source src="assets\img\WorldWise - Google Chrome 2024-09-04 20-02-05.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="project-card">
+          <h6>Mapty</h6>
+          <p>Built using Html,CSS,JS and map API(leaflet)</p>
+          <a href="https://github.com/Sunil63603/Mapty.git" class="btn github-btn" target="_blank">GitHub Link</a>
+          <a href="https://sunil-mapty.netlify.app/" class="btn demo-btn" target="_blank">Live Demo</a>
+          <video width="100%" controls autoplay>
+            <source src="assets\img\MAPTY - Google Chrome 2024-09-04 19-51-36.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Add more projects as needed -->
+      </div>
+    </section>
+
+     <!--End of Projects section-->
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+          <div class="col-lg-5">
+            <!-- 'info-wrap' is written in css file.info-wrap is towards LHS in contact section. -->
+            <div class="info-wrap">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>Ward No 22,Chintamani,Karnataka</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <a href="tel:+91 8197759383"  target="_blank" rel="noopener noreferrer"><i class="bi bi-telephone flex-shrink-0"></i></a>
+                <div>
+                  <h3>Call me</h3>
+                  <p><a href="tel:+91 8197759383" target="_blank" rel="noopener noreferrer">+91 8197759383</a></p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <a href="mailto:s60667843@gmail.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-envelope flex-shrink-0"></i></a>
+                <div>
+                  <h3>Email</h3>
+                  <p><a href="mailto:s60667843@gmail.com" target="_blank" rel="noopener noreferrer">s60667843@gmail.com</a></p>
+                </div>
+              </div><!-- End Info Item -->
+
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <!-- i have used 'web3forms' to receive form data -->
+            <form action="https://api.web3forms.com/submit" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <input type="hidden" name="access_key" value="898ba439-42e0-4c62-9865-e5e287ce2a50">
+              <div class="row gy-4">
+                <div class="col-md-6">
+                  <label for="name-field" class="pb-2">Your Name</label>
+                  <input type="text" name="name" id="name-field" class="form-control" required="">
+                </div>
+                <div class="col-md-6">
+                  <label for="email-field" class="pb-2">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email-field" required="">
+                </div>
+                <div class="col-md-12">
+                  <label for="message-field" class="pb-2">Message</label>
+                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+                </div>
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <button type="submit">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+        </div>
+      </div>
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Sunil .</strong> <span>All Rights Reserved</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+   <!-- this is used to indicate 'loader/spinner' while RHS/sections are not yet loaded -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

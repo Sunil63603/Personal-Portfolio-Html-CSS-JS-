@@ -1,0 +1,974 @@
+/* Fonts */
+/* selects root element of the document */
+:root {
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
+}
+/* these are global css variables */
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root {
+  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #050d18; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #149ddd; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+}
+
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+:root {
+  --nav-color: #a8a9b4; /* The default color of the main navmenu links */
+  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #040b14; /* Used as the background color for mobile navigation menu */
+}
+
+/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+.light-background {
+  --background-color: #f4fafd;
+  --surface-color: #ffffff;
+}
+
+.dark-background {
+  --background-color: #040b14;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #151f2b;
+  --contrast-color: #ffffff;
+}
+
+/* Smooth scroll */
+:root {
+  scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+# General Styling & Shared Classes
+--------------------------------------------------------------*/
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+/*--------------------------------------------------------------
+# Left side bar(navigation bar)
+--------------------------------------------------------------*/
+
+/*code related to left side bar/navigation bar*/
+.header {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 0 15px;
+  width: 300px;
+  transition: all ease-in-out 0.3s;
+  overflow-y: auto;
+  z-index: 997;
+  border-right: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+/* This is code related to image displayed in left side bar */
+.header .profile-img img {
+  margin: 25px auto;
+  display: block;
+  width: 120px;
+  height: 120px;
+  border: 8px solid color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+/* code which is used to display 'Sunil' in left side bar(its actually considered as logo)*/
+.header .logo {
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+.header .logo img {
+  max-height: 32px;
+  margin-right: 8px;
+}
+
+.header .logo h1 {
+  font-size: 24px;
+  margin: 0;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+/* end of code related to name/logo in left side bar*/
+
+/* code related to 'social-links'(linkedin,github,email,whatsapp) */
+.header .social-links {
+  margin: 0 0 20px 0;
+}
+
+.header .social-links a {
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  color: var(--default-color);
+  margin: 0 2px;
+  border-radius: 50%;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  transition: 0.3s;
+}
+
+.header .social-links a:hover {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+}
+/* end of css code related to social-links*/
+
+/* display left side bar if min-width is 1200px */
+@media (min-width: 1200px) {
+  .header ~ main,
+  .header ~ #footer {
+    margin-left: 300px;
+  }
+}
+
+/* display left side bar if max-width is 1199px */
+@media (max-width: 1199px) {
+  /* to hide left side bar towards left */
+  .header {
+    left: -100%;
+  }
+}
+
+.header.header-show {
+  left: 0;
+}
+
+/* below code,'header-toggle' is used to hide/show left side bar using a button/icon at top right(this is only for mobile view) */
+.header .header-toggle {
+  color: var(--contrast-color);
+  background-color: var(--accent-color);
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 9999;
+  /* is this highest z-index of this website?*/
+  transition: background-color 0.3s;
+}
+
+/* header-toggle is button used to change button's visibility */
+.header .header-toggle:hover {
+  color: var(--contrast-color);
+  background-color: color-mix(in srgb, var(--accent-color) 90%, white 15%);
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+
+/* ❌find where mobile-nav-toggle is used in index.html❌*/
+.mobile-nav-toggle {
+  display: none;
+}
+
+/*code which is related to navigation menu present in left side bar*/
+.navmenu {
+  padding: 0;
+  z-index: 9997;
+}
+
+.navmenu ul {
+  list-style: none;
+  padding: 0 0 20px 0;
+  margin: 0;
+}
+
+/* below code is for text(about,skills,resume,projects,contact) in navmenu */
+.navmenu a,
+.navmenu a:focus {
+  color: var(--nav-color);
+  padding: 15px 10px;
+  font-family: var(--nav-font);
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.navmenu a:hover,
+.navmenu .active,
+.navmenu .active:focus {
+  color: var(--nav-hover-color);
+}
+
+/* below code is for icons present in navmenu */
+.navmenu a .navicon,
+.navmenu a:focus .navicon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.navmenu a:hover .navicon,
+.navmenu .active .navicon,
+.navmenu .active:focus .navicon {
+  color: var(--accent-color);
+}
+
+/* code to highlight contact button with green background in left side bar(navmenu in specific) */
+.contact-button {
+  color: black;
+  position: relative;
+  padding: 5px;
+  list-style: none;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-button::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    45deg,
+    #17e24d,
+    #16e624,
+    #15f032,
+    #5ced23,
+    #1ef13d,
+    #1cef5f,
+    #21f44f,
+    #20ef2b
+  );
+  background-size: 100%;
+  filter: blur(1px);
+  z-index: -1;
+  border-radius: 10px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  animation: glowing 20s linear infinite;
+}
+
+/*keyframes are used to define different transitions(glowing colors in contact button) at different situations */
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.contact-button:hover::before {
+  opacity: 0.9;
+}
+
+.contact-button a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  border-radius: 8px;
+  transition: color 0.3s ease-in-out;
+}
+
+.contact-button:hover a {
+  color: white;
+}
+/* end of code to highlight contact button in left side bar */
+
+/*--------------------------------------------------------------
+# Global Sections
+--------------------------------------------------------------*/
+/* code common to all sections */
+section,
+.section {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 60px 0;
+  overflow: clip;
+}
+
+/*--------------------------------------------------------------
+# Global Section Titles
+--------------------------------------------------------------*/
+.section-title {
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.section-title h2:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--accent-color);
+  left: 0;
+  bottom: 0;
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+/* this above css class is used in all sections of the webpage */
+
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+.about .content h2 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.about .content ul strong {
+  margin-right: 10px;
+}
+
+.about .content ul i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: var(--accent-color);
+  line-height: 0;
+}
+
+/* 👇code from tabnine to increase the size and make the icons(js and react icons) bold */
+.fab {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* 👇code from tabnine for 'see my work' button in about section */
+.btn-green {
+  padding: 15px 40px;
+  border: none;
+  outline: none;
+  color: black;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.btn-green::after {
+  content: "";
+  z-index: -2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #424141;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.btn-green::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #abe5ab,
+    #73f173,
+    #86e583,
+    #9be798,
+    #91e988,
+    #8cf372,
+    #67e16b,
+    #8beca1
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  filter: blur(1px);
+  animation: glowing 10s linear infinite;
+  transform: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.btn-green:hover::before {
+  opacity: 0.9;
+}
+
+.btn-green:active::after {
+  background: transparent;
+}
+
+.btn-green:active {
+  color: #000;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .btn-green {
+    padding: 3px 3px;
+    font-size: 16px;
+  }
+}
+/* end of code from tabnine for 'see my work' button in about section */
+
+/* this below code ensures that whenever i want to navigate section,'scroll' happens smooth */
+/* Smooth scroll effect */
+a[href^="#"] {
+  text-decoration: none;
+  color: inherit;
+}
+
+a[href^="#"]:hover {
+  color: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 👇tabnine code to display content and green button,side by side   */
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-text {
+  margin-left: 70px;
+  flex-basis: 70%;
+}
+
+.about-button {
+  flex-basis: 30%;
+  text-align: center;
+  margin-right: 100px;
+}
+/* end of code related to about section */
+
+/*--------------------------------------------------------------
+# Skills Section
+--------------------------------------------------------------*/
+/* 👇chatGPT code for skills section */
+.skills-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.skill-item {
+  background-color: #f0f0f0;
+  color: #333;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin: 10px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  border: 2px solid #baf2b7; /* Add this line to add a red border */
+}
+
+.skill-item:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .skill-item {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-item {
+    width: 100%;
+  }
+}
+/* end of code related to skills section */
+
+/*--------------------------------------------------------------
+# Resume Section
+--------------------------------------------------------------*/
+.resume .resume-title {
+  color: var(--heading-color);
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid var(--accent-color);
+  position: relative;
+}
+
+.resume .resume-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+  font-size: 16px;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item ul {
+  padding-left: 20px;
+}
+
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+}
+
+.resume .resume-item:last-child {
+  padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: var(--background-color);
+  border: 2px solid var(--accent-color);
+}
+
+/* 👇chatGPT code for resume download button */
+.resume-button-container {
+  text-align: center; /* Center the button horizontally */
+  margin-top: 30px; /* Add spacing from the content above */
+}
+
+@media (max-width: 768px) {
+  .resume-button-container {
+    margin-top: 20px; /* Adjust spacing on smaller screens */
+  }
+}
+/* end of code related to resume section */
+
+/*--------------------------------------------------------------
+# Projects Section
+--------------------------------------------------------------*/
+/* Projects Section */
+
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.project-card {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #efe5de; /* Light skin color */
+  width: 100%;
+  max-width: 800px;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.project-card h6 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.project-card .btn {
+  display: inline-block;
+  padding: 12px 25px;
+  margin: 10px 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px); /* Lift the card */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+.github-btn {
+  background-color: #333;
+}
+
+.demo-btn {
+  background-color: #007bff;
+}
+
+.btn:hover {
+  background-color: #28a745; /* Green background */
+  color: #ffffff; /* White text */
+}
+
+video {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,  0,  0,  0.5);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .projects-grid {
+    flex-direction: column;
+  }
+
+  .project-card,
+  .project-card {
+    width: 100%;
+    border-right: none;
+    padding: 1rem;
+  }
+
+  .project-left {
+    border-bottom: 1px solid #ddd;
+  }
+}
+/* end of code related to projects section */
+
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+
+/* code related to LHS of contact section */
+.contact .info-wrap {
+  background-color: var(--surface-color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+@media (max-width: 575px) {
+  .contact .info-wrap {
+    padding: 20px;
+  }
+}
+
+.contact .info-item {
+  margin-bottom: 40px;
+}
+
+.contact .info-item i {
+  font-size: 20px;
+  color: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 92%);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  margin-right: 15px;
+}
+
+.contact .info-item h3 {
+  padding: 0;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.contact .info-item p {
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.contact .info-item:hover i {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
+/* end of code related to LHS of contact section */
+
+
+/* code related to RHS of contact section */
+
+
+.contact .php-email-form {
+  background-color: var(--surface-color);
+  height: 100%;
+  padding: 30px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 575px) {
+  .contact .php-email-form {
+    padding: 20px;
+  }
+}
+
+.contact .php-email-form input[type="text"],
+.contact .php-email-form input[type="email"],
+.contact .php-email-form textarea {
+  font-size: 14px;
+  padding: 10px 15px;
+  box-shadow: none;
+  border-radius: 0;
+  color: var(--default-color);
+  background-color: var(--surface-color);
+  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+}
+
+.contact .php-email-form input[type="text"]:focus,
+.contact .php-email-form input[type="email"]:focus,
+.contact .php-email-form textarea:focus {
+  border-color: var(--accent-color);
+}
+
+.contact .php-email-form input[type="text"]::placeholder,
+.contact .php-email-form input[type="email"]::placeholder,
+.contact .php-email-form textarea::placeholder {
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+.contact .php-email-form button[type="submit"] {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  border: 0;
+  padding: 10px 30px;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.contact .php-email-form button[type="submit"]:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 25%);
+}
+
+
+/* this below code is used to display successfull message transfer*/
+.php-email-form .sent-message {
+  display: none;
+  color: #ffffff;
+  background: #059652;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+/* this below code is used to display loader when message transfer is under progress*/
+.php-email-form .loading {
+  display: none;
+  background: var(--surface-color);
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+}
+
+/* even this below code is related to displaying loader when message transfer is under progress*/
+.php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid var(--accent-color);
+  border-top-color: var(--surface-color);
+  animation: php-email-form-loading 1s linear infinite;
+}
+
+/*keyframes is used to create animations,and this is the code that rotates loader of form*/
+@keyframes php-email-form-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Global Footer
+--------------------------------------------------------------*/
+.footer {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-size: 14px;
+  padding: 40px 0;
+  position: relative;
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.footer .copyright p {
+  margin-bottom: 0;
+}
+
+.footer .credits {
+  margin-top: 4px;
+  font-size: 13px;
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Scroll Top Button
+--------------------------------------------------------------*/
+.scroll-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: -15px;
+  z-index: 99999;
+  background-color: var(--accent-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.scroll-top i {
+  font-size: 24px;
+  color: var(--contrast-color);
+  line-height: 0;
+}
+
+.scroll-top:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: var(--contrast-color);
+}
+
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+  bottom: 15px;
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+/* this is basically to indicate that the page 'isLoading',by displaying 'spinner' on the screen   */
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  overflow: hidden;
+  background: var(--background-color);
+  transition: all 0.6s ease-out;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #ffffff;
+  border-color: var(--accent-color) transparent var(--accent-color) transparent;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: animate-preloader 1.5s linear infinite;
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}
