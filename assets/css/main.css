@@ -257,7 +257,7 @@ h6 {
   position: relative;
   padding: 5px;
   list-style: none;
-  border-radius: 8px;
+  border-radius: 10px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -265,8 +265,8 @@ h6 {
   content: "";
   position: absolute;
   top: -2px;
-  left: -2px;
-  right: -2px;
+  left: -0px;
+  right: -0px;
   bottom: -2px;
   background: linear-gradient(
     45deg,
@@ -282,7 +282,7 @@ h6 {
   background-size: 100%;
   filter: blur(1px);
   z-index: -1;
-  border-radius: 10px;
+  border-radius: 20px;
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
   animation: glowing 20s linear infinite;
@@ -302,11 +302,11 @@ h6 {
 }
 
 .contact-button:hover::before {
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .contact-button a {
-  color: white;
+  color: black !important;
   text-decoration: none;
   font-weight: bold;
   display: inline-block;
@@ -315,7 +315,7 @@ h6 {
 }
 
 .contact-button:hover a {
-  color: white;
+  color: black;
 }
 /* end of code to highlight contact button in left side bar */
 
@@ -362,7 +362,6 @@ section,
   margin-bottom: 0;
 }
 /* this above css class is used in all sections of the webpage */
-
 
 /*--------------------------------------------------------------
 # About Section
@@ -771,9 +770,7 @@ video {
 }
 /* end of code related to LHS of contact section */
 
-
 /* code related to RHS of contact section */
-
 
 .contact .php-email-form {
   background-color: var(--surface-color);
@@ -825,7 +822,6 @@ video {
   background: color-mix(in srgb, var(--accent-color), transparent 25%);
 }
 
-
 /* this below code is used to display successfull message transfer*/
 .php-email-form .sent-message {
   display: none;
@@ -869,7 +865,6 @@ video {
     transform: rotate(360deg);
   }
 }
-
 
 /*--------------------------------------------------------------
 # Global Footer
