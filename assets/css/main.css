@@ -503,7 +503,7 @@ html {
 .about-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
 }
 
 .about-text {
@@ -516,6 +516,37 @@ html {
   text-align: center;
   margin-right: 100px;
 }
+
+/* chatGPT code for about section's mobile view where about-content and about-button are  displayed side-by-side*/
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  /* Make about-content stack vertically */
+  .about-content {
+    flex-direction: column;
+  }
+
+  /* Place about-button below the content */
+  .about-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 20px; /* Add some space between content and button */
+    width: 50%; /* Make the button span the full width on mobile */
+    text-align: center;
+  }
+
+  /* Button styles for mobile */
+  .btn-green {
+    font-size: 1.2rem; /* Slightly larger font size for better readability */
+    padding: 12px 24px; /* Adjust padding for mobile */
+    width: 100%; /* Full width button */
+  }
+}
+
 /* end of code related to about section */
 
 /*--------------------------------------------------------------
