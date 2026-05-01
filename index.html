@@ -34,6 +34,20 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   <!-- link CSS file in head,so that page renders(with styles) as fast as possible -->
+
+  <link rel="stylesheet" href="https://unpkg.com/ahdjs/build/css/index.css" />
+<script type="text/javascript" src="https://unpkg.com/ahdjs/build/index.js"></script>
+<script>
+const AHDjs = window.AHDjs.default;
+let _ahdJs = new AHDjs(undefined, {
+  applicationId: "68c413718051925116f90732",
+  apiHost: "https://pagepilot.fabbuilder.com",
+  visitorId: 'visitor-id',
+  showProgressbar: false
+});
+_ahdJs.initializeSiteMap();
+_ahdJs.showHighlights("/", true);
+</script>
 </head>
 
 <!-- ❌I Didnt find .index-page in main.css-->
@@ -56,7 +70,7 @@
 
     <!-- code to display social media links in left side bar -->
      <!-- i think 'text-center' is class of bootstrap framework-->
-    <div class="social-links text-center">
+    <div class="social-links text-center" id="social-links">
       <a href="https://www.linkedin.com/in/Sunil63603/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
       <a href="https://github.com/Sunil63603" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
       <a href="mailto:s60667843@gmail.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-envelope"></i></a>
@@ -266,7 +280,7 @@
         </div>
         <div class="resume-button-container">
           <!-- here is the logic to download resume ,from my google drive -->
-          <a href="https://drive.google.com/file/d/1VTjiLYh4P9bi-31Ta87mQ6cEQOGsF48S/view?usp=sharing" class="btn-green" download="Sunil_Resume.pdf">Download Resume <i class="bi bi-download"></i></a>
+          <a href="https://drive.google.com/file/d/1VTjiLYh4P9bi-31Ta87mQ6cEQOGsF48S/view?usp=sharing" class="btn-green" download="Sunil_Resume.pdf" id="resume-button-container">Download Resume <i class="bi bi-download"></i></a>
         </div>
       </div>
     </section><!-- /Resume Section -->
@@ -361,7 +375,7 @@
             </div>
           </div>
 
-          <div class="col-lg-7">
+          <div class="col-lg-7" id="enter-msg">
             <!-- i have used 'web3forms' to receive form data -->
             <form action="https://api.web3forms.com/submit" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <input type="hidden" name="access_key" value="898ba439-42e0-4c62-9865-e5e287ce2a50">
