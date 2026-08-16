@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "ahdjs": "^0.0.184"
+    "ahdjs": "^0.0.198"
   },
   "scripts": {
     "start": "live-server --port=4000"
