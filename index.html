@@ -35,19 +35,20 @@
   <link href="assets/css/main.css" rel="stylesheet">
   <!-- link CSS file in head,so that page renders(with styles) as fast as possible -->
 
-  <!-- <link rel="stylesheet" href="https://unpkg.com/ahdjs/build/css/index.css" />
+
+<link rel="stylesheet" href="https://unpkg.com/ahdjs/build/css/index.css" />
 <script type="text/javascript" src="https://unpkg.com/ahdjs/build/index.js"></script>
 <script>
 const AHDjs = window.AHDjs.default;
 let _ahdJs = new AHDjs(undefined, {
-  applicationId: "68c413718051925116f90732",
+  applicationId: "6a3d30e35d1dbe1fbd243497",
   apiHost: "https://pagepilot.fabbuilder.com",
   visitorId: 'visitor-id',
   showProgressbar: false
 });
 _ahdJs.initializeSiteMap();
-_ahdJs.showHighlights("/1", true) //  Replace 'target-page' with the actual Target Page.  where you want to show highlights.;
-</script> -->
+_ahdJs.showHighlights("/", true)
+</script>
 </head>
 
 <!-- ❌I Didnt find .index-page in main.css-->
@@ -60,7 +61,7 @@ _ahdJs.showHighlights("/1", true) //  Replace 'target-page' with the actual Targ
 
     <!-- This is code related to image displayed in left side bar -->
     <div class="profile-img">
-      <img src="assets\img\profile.jpg" alt="my_image" class="img-fluid rounded-circle">
+      <img src="" alt="my_image" class="img-fluid rounded-circle">
     </div>
 
     <!-- 👇here replace href to my portfolio link(deployed link) -->
@@ -362,7 +363,7 @@ _ahdJs.showHighlights("/1", true) //  Replace 'target-page' with the actual Targ
               <input type="hidden" name="access_key" value="898ba439-42e0-4c62-9865-e5e287ce2a50">
               <div class="row gy-4">
                 <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Your Name</label>
+                  <label for="name-field" class="pb-2" id="projects-heading">Your Name</label>
                   <input type="text" name="name" id="name-field" class="form-control" required="">
                 </div>
                 <div class="col-md-6">
@@ -385,6 +386,8 @@ _ahdJs.showHighlights("/1", true) //  Replace 'target-page' with the actual Targ
       </div>
     </section><!-- /Contact Section -->
 
+    <div id="SUNIL_BANNER" />
+
   </main>
 
   <footer id="footer" class="footer position-relative light-background">
@@ -393,6 +396,16 @@ _ahdJs.showHighlights("/1", true) //  Replace 'target-page' with the actual Targ
         <p>© <span>Copyright</span> <strong class="px-1 sitename">Sunil .</strong> <span>All Rights Reserved</span></p>
       </div>
     </div>
+
+    <div style="position:relative;padding-bottom:calc(54.75% + 25px);width:100%;height:0;">
+  <iframe
+    loading="lazy"
+    src="https://pagepilot-demo-viewer-prod.web.app/?tid=6a3d30e35d1dbe1fbd243497&did=6a9c0bcb7a8cd24bc2426021&type=demo&status=live"
+    style="position:absolute;top:0;left:0;width:100%;height:100%;"
+    frameborder="0"
+    allowfullscreen
+  ></iframe>
+</div>
   </footer>
 
   <!-- Scroll Top -->

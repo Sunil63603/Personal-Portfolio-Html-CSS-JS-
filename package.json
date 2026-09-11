@@ -1,8 +1,11 @@
 {
   "dependencies": {
-    "ahdjs": "^0.0.198"
+    "ahdjs": "^0.0.227"
   },
   "scripts": {
-    "start": "live-server --port=4000"
+    "start": "vite"
+  },
+  "devDependencies": {
+    "vite": "^8.2.2"
   }
 }
