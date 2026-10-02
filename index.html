@@ -36,20 +36,6 @@
   <!-- link CSS file in head,so that page renders(with styles) as fast as possible -->
 
 
-<link rel="stylesheet" href="https://unpkg.com/ahdjs/build/css/index.css" />
-<script type="text/javascript" src="https://unpkg.com/ahdjs/build/index.js"></script>
-<script>
-const AHDjs = window.AHDjs.default;
-let _ahdJs = new AHDjs(undefined, {
-  applicationId: "6a3d30e35d1dbe1fbd243497",
-  apiHost: "https://pagepilot.fabbuilder.com",
-  visitorId: 'visitor-id',
-  showProgressbar: false
-});
-_ahdJs.initializeSiteMap();
-_ahdJs.showHighlights("/", true)
-_ahdJs.renderAppBanner("SUNIL_BANNER", true);
-</script>
 </head>
 
 <!-- ❌I Didnt find .index-page in main.css-->
@@ -62,7 +48,7 @@ _ahdJs.renderAppBanner("SUNIL_BANNER", true);
 
     <!-- This is code related to image displayed in left side bar -->
     <div class="profile-img">
-      <img src="" alt="my_image" class="img-fluid rounded-circle">
+      <img src="assets\img\profile.jpg" alt="my_image" class="img-fluid rounded-circle">
     </div>
 
     <!-- 👇here replace href to my portfolio link(deployed link) -->
@@ -262,7 +248,7 @@ _ahdJs.renderAppBanner("SUNIL_BANNER", true);
             <h3 class="resume-title">Professional Experience</h3>
             <div class="resume-item">
               <h4>CodeRower Software Private Limited(Internship And Full Time)</h4>
-              <h5>Aug 2025 - till now</h5>
+              <h5>Sept 2025 - Sept 2026</h5>
               <p><em>Gurugaon,Haryana,India</em></p>
               <ul>
                 <li>Worked on PagePilot Project</li>
@@ -273,8 +259,8 @@ _ahdJs.renderAppBanner("SUNIL_BANNER", true);
             <div class="resume-item">
               <ul>
                 <li><strong>Programming Languages</strong> : C,Core Java</li>
-                <li><strong>Web Technologies</strong> : HTML,CSS,TailwindCSS,JavaScript,
-                  TypeScript,NextJS,MongoDB,ExpressJS,ReactJS,NodeJS</li>
+                <li><strong>Web Technologies</strong> : HTML, CSS, TailwindCSS, JavaScript,
+                  TypeScript, NextJS, MongoDB, ExpressJS, ReactJS, NodeJS</li>
                 <li><strong>Tools</strong> : Github</li>
               <ul> 
             </div>
@@ -282,7 +268,7 @@ _ahdJs.renderAppBanner("SUNIL_BANNER", true);
         </div>
         <div class="resume-button-container">
           <!-- here is the logic to download resume ,from my google drive -->
-          <a href="https://drive.google.com/file/d/1HeuNNifiOAZwpJEfGKzhJP_KPLpiBlzN/view?usp=sharing" class="btn-green" download="Sunil_Resume.pdf" id="resume-button-container">Download Resume <i class="bi bi-download"></i></a>
+          <a href="https://drive.google.com/file/d/1q8qht6bxNrXIHj9ixcj5D6oouIm0f1Ms/view?usp=sharing" class="btn-green" download="Sunil_Resume.pdf" id="resume-button-container">Download Resume <i class="bi bi-download"></i></a>
         </div>
       </div>
     </section><!-- /Resume Section -->
@@ -387,7 +373,6 @@ _ahdJs.renderAppBanner("SUNIL_BANNER", true);
       </div>
     </section><!-- /Contact Section -->
 
-    <div id="SUNIL_BANNER" />
 
   </main>
 
@@ -398,15 +383,7 @@ _ahdJs.renderAppBanner("SUNIL_BANNER", true);
       </div>
     </div>
 
-    <div style="position:relative;padding-bottom:calc(54.75% + 25px);width:100%;height:0;">
-  <iframe
-    loading="lazy"
-    src="https://pagepilot-demo-viewer-prod.web.app/?tid=6a3d30e35d1dbe1fbd243497&did=6a9c0bcb7a8cd24bc2426021&type=demo&status=live"
-    style="position:absolute;top:0;left:0;width:100%;height:100%;"
-    frameborder="0"
-    allowfullscreen
-  ></iframe>
-</div>
+    
   </footer>
 
   <!-- Scroll Top -->

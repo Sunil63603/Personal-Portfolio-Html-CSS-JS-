@@ -1,7 +1,4 @@
 {
-  "dependencies": {
-    "ahdjs": "^0.0.227"
-  },
   "scripts": {
     "start": "vite"
   },
